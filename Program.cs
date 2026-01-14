@@ -6,7 +6,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddHttpClient<EnergyMixClient>();
-
+builder.Services.AddScoped<EnergyMixService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
