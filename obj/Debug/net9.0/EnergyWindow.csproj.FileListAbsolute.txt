@@ -33,3 +33,4 @@ C:\Users\zuzia\Desktop\EnergyWindow\obj\Debug\net9.0\ref\EnergyWindow.dll
 C:\Users\zuzia\Desktop\EnergyWindow\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\zuzia\Desktop\EnergyWindow\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\zuzia\Desktop\EnergyWindow\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\zuzia\Desktop\EnergyWindow\obj\Debug\net9.0\EnergyWindow.sourcelink.json
