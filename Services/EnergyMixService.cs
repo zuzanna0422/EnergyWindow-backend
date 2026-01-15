@@ -9,9 +9,10 @@ public class EnergyMixService
 
     public async Task<EnergyMix> GetThreeDaysRawAsync()
     {
-        var todayUtc = DateTime.UtcNow.Date;
-        var from = todayUtc;
-        var to = todayUtc.AddDays(2);
+        var ukTz = TimeZoneInfo.FindSystemTimeZoneById("GMT Standard Time");
+        var todayUk = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, ukTz).Date;
+        var from = TimeZoneInfo.ConvertTimeToUtc(todayUk, ukTz);
+        var to = TimeZoneInfo.ConvertTimeToUtc(todayUk.AddDays(3), ukTz);
 
         var data = await _client.GetEnergyMixAsync(from, to);
         if (data is null)
@@ -25,10 +26,12 @@ public class EnergyMixService
     public List<DailyMix> BuildDailyMix(EnergyMix energyMix)
     {
         var cleanFuels = new HashSet<string> { "biomass", "nuclear", "hydro", "wind", "solar" };
+        var ukTz = TimeZoneInfo.FindSystemTimeZoneById("GMT Standard Time");
 
         return energyMix.Data
-            .GroupBy(entry => entry.From.Date)
+            .GroupBy(entry => TimeZoneInfo.ConvertTimeFromUtc(entry.From, ukTz).Date)
             .OrderBy(group => group.Key)
+            .Skip(1)
             .Select(group =>
             {
                 var allEntries = group.SelectMany(entry => entry.GenerationMix);
