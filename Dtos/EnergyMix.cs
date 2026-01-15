@@ -3,7 +3,7 @@ using System.Text.Json.Serialization;
 public class EnergyMix
 {
     [JsonPropertyName("data")]
-    public List<Interval> Data { get; set; }
+    public List<Interval> Data { get; set; } = new();
 
     public class Interval
     {
@@ -14,12 +14,12 @@ public class EnergyMix
         public DateTime To { get; set; }
 
         [JsonPropertyName("generationmix")]
-        public List<GenerationMix> GenerationMix { get; set; }
+        public List<GenerationMix> GenerationMix { get; set; } = new();
     }
     public class GenerationMix
     {
         [JsonPropertyName("fuel")]
-        public string Fuel { get; set; }
+        public string Fuel { get; set; } = "";
 
         [JsonPropertyName("perc")]
         public double Perc { get; set; }

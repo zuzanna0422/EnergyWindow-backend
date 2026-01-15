@@ -14,6 +14,6 @@ public class EnergyMixClient
         var from = fromUrl.ToString("yyyy-MM-ddTHH:mmZ");
         var to = toUrl.ToString("yyyy-MM-ddTHH:mmZ");
         var url = $"https://api.carbonintensity.org.uk/generation/{from}/{to}";
-        return await _httpClient.GetFromJsonAsync<EnergyMix>(url);
+        return await _httpClient.GetFromJsonAsync<EnergyMix>(url) ?? throw new InvalidOperationException("Energy response was empty.");
     }
 }
