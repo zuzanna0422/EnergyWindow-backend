@@ -22,6 +22,13 @@ public class EnergyMixController : ControllerBase
 
     }
 
+    [HttpGet("optimal-window")]
+    public async Task<IActionResult> GetOptimalWindow(int hours)
+    {
+        var data = await _service.GetOptimalWindowAsync(hours);
+        return Ok(data);
+    }
+
     [HttpGet("generation")]
     public async Task<IActionResult> GetGeneration([FromQuery] DateTime from, [FromQuery] DateTime to)
     {

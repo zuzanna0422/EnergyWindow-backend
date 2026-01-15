@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EnergyWindow")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+73f0b9db95507cce4f93a0b244a03f34cfed102e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d3c771f09e680c4cbc3f61a5cce49243ead278f3")]
 [assembly: System.Reflection.AssemblyProductAttribute("EnergyWindow")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EnergyWindow")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
