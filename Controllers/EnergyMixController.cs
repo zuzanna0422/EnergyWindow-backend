@@ -4,12 +4,10 @@ using Microsoft.AspNetCore.Mvc;
 [Route("api/[controller]")]
 public class EnergyMixController : ControllerBase
 {
-    private readonly EnergyMixClient _client;
     private readonly EnergyMixService _service;
 
     public EnergyMixController(EnergyMixClient client, EnergyMixService service)
     {
-        _client = client;
         _service = service;
     }
 
@@ -29,15 +27,4 @@ public class EnergyMixController : ControllerBase
         return Ok(data);
     }
 
-    [HttpGet("generation")]
-    public async Task<IActionResult> GetGeneration([FromQuery] DateTime from, [FromQuery] DateTime to)
-    {
-        var data = await _client.GetEnergyMixAsync(from, to);
-        if (data is null)
-        {
-            return StatusCode(502, "External API returned no data.");
-        }
-
-        return Ok(data);
-    }
 }

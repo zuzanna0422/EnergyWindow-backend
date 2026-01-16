@@ -551,11 +551,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\zuzia\\Desktop\\EnergyWindow\\EnergyWindow.csproj",
+      "projectUniqueName": "C:\\Users\\zuzia\\Desktop\\Project\\backend\\EnergyWindow\\EnergyWindow.csproj",
       "projectName": "EnergyWindow",
-      "projectPath": "C:\\Users\\zuzia\\Desktop\\EnergyWindow\\EnergyWindow.csproj",
+      "projectPath": "C:\\Users\\zuzia\\Desktop\\Project\\backend\\EnergyWindow\\EnergyWindow.csproj",
       "packagesPath": "C:\\Users\\zuzia\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\zuzia\\Desktop\\EnergyWindow\\obj\\",
+      "outputPath": "C:\\Users\\zuzia\\Desktop\\Project\\backend\\EnergyWindow\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\zuzia\\AppData\\Roaming\\NuGet\\NuGet.Config",
