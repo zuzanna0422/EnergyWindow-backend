@@ -1,0 +1,6 @@
+C:\Users\zuzia\Desktop\Project\backend\EnergyWindow\EnergyWindow.Tests\obj\Debug\net9.0\EnergyWindow.Tests.csproj.AssemblyReference.cache
+C:\Users\zuzia\Desktop\Project\backend\EnergyWindow\EnergyWindow.Tests\obj\Debug\net9.0\EnergyWindow.Tests.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zuzia\Desktop\Project\backend\EnergyWindow\EnergyWindow.Tests\obj\Debug\net9.0\EnergyWindow.Tests.AssemblyInfoInputs.cache
+C:\Users\zuzia\Desktop\Project\backend\EnergyWindow\EnergyWindow.Tests\obj\Debug\net9.0\EnergyWindow.Tests.AssemblyInfo.cs
+C:\Users\zuzia\Desktop\Project\backend\EnergyWindow\EnergyWindow.Tests\obj\Debug\net9.0\EnergyWindow.Tests.csproj.CoreCompileInputs.cache
+C:\Users\zuzia\Desktop\Project\backend\EnergyWindow\EnergyWindow.Tests\obj\Debug\net9.0\EnergyWindow.Tests.sourcelink.json

@@ -10,12 +10,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("EnergyWindow")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("EnergyWindow.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+89d8d6fc2037f8e8e6579c32b9a05c12a3b15f1e")]
-[assembly: System.Reflection.AssemblyProductAttribute("EnergyWindow")]
-[assembly: System.Reflection.AssemblyTitleAttribute("EnergyWindow")]
+[assembly: System.Reflection.AssemblyProductAttribute("EnergyWindow.Tests")]
+[assembly: System.Reflection.AssemblyTitleAttribute("EnergyWindow.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // Wygenerowane przez klasę WriteCodeFragment programu MSBuild.
