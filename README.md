@@ -28,4 +28,4 @@ The backend performs all business logic, including:
 ---
 * **Frontend Repository:** [https://github.com/zuzanna0422/energywindow-frontend](https://github.com/zuzanna0422/energywindow-frontend)
 * **Live Application:** [https://energywindow-frontend.onrender.com/](https://energywindow-frontend.onrender.com/)
-* **Carbon Intensity API (UK):** [https://carbon-intensity.github.io](https://carbon-intensity.github.io)
+* **Carbon Intensity API (UK):** [https://carbon-intensity.github.io](https://carbon-intensity.github.io/api-definitions/?shell#get-generation-from-to)
