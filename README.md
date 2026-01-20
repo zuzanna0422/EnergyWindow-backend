@@ -10,7 +10,6 @@ The backend performs all business logic, including:
 
 * Determining the optimal charging window (1–6 hours) based on forecasted energy mix
 
-  ---
 
 ## 🚀 Features
 
@@ -27,6 +26,6 @@ The backend performs all business logic, including:
 * Type-safe DTOs and null-safety handling
 
 ---
-**Frontend Repository:** [https://github.com/zuzanna0422/energywindow-frontend](https://github.com/zuzanna0422/energywindow-frontend)
-**Live Application:** [https://energywindow-frontend.onrender.com/](https://energywindow-frontend.onrender.com/)
-**Carbon Intensity API (UK):** [https://carbon-intensity.github.io](https://carbon-intensity.github.io)
+* **Frontend Repository:** [https://github.com/zuzanna0422/energywindow-frontend](https://github.com/zuzanna0422/energywindow-frontend)
+* **Live Application:** [https://energywindow-frontend.onrender.com/](https://energywindow-frontend.onrender.com/)
+* **Carbon Intensity API (UK):** [https://carbon-intensity.github.io](https://carbon-intensity.github.io)
