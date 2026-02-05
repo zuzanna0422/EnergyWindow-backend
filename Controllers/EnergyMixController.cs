@@ -6,7 +6,7 @@ public class EnergyMixController : ControllerBase
 {
     private readonly EnergyMixService _service;
 
-    public EnergyMixController(EnergyMixClient client, EnergyMixService service)
+    public EnergyMixController(EnergyMixService service)
     {
         _service = service;
     }
@@ -14,7 +14,7 @@ public class EnergyMixController : ControllerBase
     [HttpGet("daily-mix")]
     public async Task<IActionResult> GetDailyMix()
     {
-        var rawData = await _service.GetThreeDaysRawAsync();
+        var rawData = await _service.GetDaysRawAsync();
         var dailyMix = _service.BuildDailyMix(rawData);
         return Ok(dailyMix);
 

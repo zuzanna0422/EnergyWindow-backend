@@ -10,12 +10,19 @@ builder.Services.AddScoped<EnergyMixService>();
 
 builder.Services.AddCors(options =>
 {
+    var allowedOriginsValue = builder.Configuration["Cors:AllowedOrigins"];
+
+    if (string.IsNullOrWhiteSpace(allowedOriginsValue))
+    {
+        throw new InvalidOperationException("CORS allowed origins are not configured.");
+    }
+
+    var allowedOrigins = allowedOriginsValue.Split(',', StringSplitOptions.TrimEntries | StringSplitOptions.RemoveEmptyEntries);
+
     options.AddPolicy("Frontend",
         policy =>
         {
-            policy.WithOrigins(
-                    "http://localhost:5173",
-                    "https://energywindow-frontend.onrender.com")
+            policy.WithOrigins(allowedOrigins)
                   .AllowAnyHeader()
                   .AllowAnyMethod();
         });
@@ -31,8 +38,6 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
-app.UseAuthorization();
 
 app.UseCors("Frontend");
 

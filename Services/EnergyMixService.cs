@@ -7,9 +7,9 @@ public class EnergyMixService
         _client = client;
     }
 
-    public async Task<EnergyMix> GetThreeDaysRawAsync()
+    public async Task<EnergyMix> GetDaysRawAsync(int days = 3)
     {
-        var (from, to) = GetUtcRangeForPastDays(3);
+        var (from, to) = GetUtcRangeForNextDays(days);
         var data = await _client.GetEnergyMixAsync(from, to);
         if (data is null)
         {
@@ -59,7 +59,7 @@ public class EnergyMixService
             throw new ArgumentOutOfRangeException(nameof(hours), "Hours must be between 1 and 6.");
         }
 
-        var (from, to) = GetUtcRangeForPastDays(2);
+        var (from, to) = GetUtcRangeForNextDays(2);
         var data = await _client.GetEnergyMixAsync(from, to);
         if (data is null)
         {
@@ -113,7 +113,7 @@ public class EnergyMixService
 
     }
 
-    private (DateTime fromUtc, DateTime toUtc) GetUtcRangeForPastDays(int days)
+    private (DateTime fromUtc, DateTime toUtc) GetUtcRangeForNextDays(int days)
     {
         var ukTz = TimeZoneInfo.FindSystemTimeZoneById("GMT Standard Time");
         var todayUk = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, ukTz).Date;
