@@ -1,3 +1,4 @@
+using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Mvc;
 
 [ApiController]
@@ -21,7 +22,7 @@ public class EnergyMixController : ControllerBase
     }
 
     [HttpGet("optimal-window")]
-    public async Task<IActionResult> GetOptimalWindow(int hours)
+    public async Task<IActionResult> GetOptimalWindow([FromQuery, Range(1, 6)] int hours)
     {
         var data = await _service.GetOptimalWindowAsync(hours);
         return Ok(data);
